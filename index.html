@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Buggy website for testing purposes">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: #f4f4f9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: #3a86ff;
+            color: #fff;
+            padding: 1rem 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        nav ul li a:hover {
+            background: #2646a6;
+        }
+
+        main {
+            flex: 1;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        h1 {
+            color: #3a86ff;
+            margin-bottom: 1rem;
+        }
+
+        form {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        form input, form button {
+            display: block;
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        form input:focus, form button:hover {
+            border-color: #3a86ff;
+            outline: none;
+        }
+
+        form button {
+            background: #3a86ff;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+        }
+
+        form button:disabled {
+            background: #ddd;
+            cursor: not-allowed;
+        }
+
+        footer {
+            background: #3a86ff;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="easteregg.html">Broken URL</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Welcome to the Buggy Website</h1>
+        <p>This website intentionally contains several bugs for testing purposes.</p>
+
+        <button disabled>Submit</button>
+
+        <input type="text" id="username" name="username">
+
+        <form action="#" method="POST">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email">
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Buggy Website. All rights reserved.</p>
+    </footer>
+
+    <script>
+        if (performance.navigation.type === 1) {
+            window.location.href = 'index.html';
+        }
+
+        const currentPage = window.location.pathname.split('/').pop();
+        if (currentPage !== 'index.html') {
+            document.querySelector('nav').style.display = 'none';
+        }
+
+        if (currentPage !== 'contact.html') {
+            const contactLink = document.querySelector('a[href="contact.html"]');
+            if (contactLink) contactLink.style.display = 'none';
+        }
+
+        document.querySelector('input[type="search"]')?.addEventListener('input', function (e) {
+            e.preventDefault();
+        });
+    </script>
+</body>
+</html>
