@@ -10,8 +10,4 @@ if (currentPage !== 'index.html') {
 if (currentPage !== 'contact.html') {
     const contactLink = document.querySelector('a[href="contact.html"]');
     if (contactLink) contactLink.style.display = 'none';
-}
-
-document.querySelector('input[type="search"]')?.addEventListener('input', function (e) {
-    e.preventDefault();
-});
+};
