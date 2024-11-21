@@ -1,0 +1,15 @@
+{
+  "name": "project-name",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests/test_example.js"
+  },
+  "devDependencies": {
+    "mocha": "^9.2.2",
+    "selenium-webdriver": "^4.26.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
