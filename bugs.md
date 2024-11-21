@@ -35,8 +35,8 @@ Bug: Submit button on homepage is disabled
 Fix: Enable submit button
 
 # Bug 10
-Bug: 
-Fix: 
+Bug: The submit button on the homepage doesn't do anything
+Fix: Make a nice message for the user
 
 # Improvement 1
 Make active page highlighted on the navbar
