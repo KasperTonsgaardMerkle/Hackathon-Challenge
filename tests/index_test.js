@@ -51,4 +51,10 @@ describe('Index Page Tests', function() {
         assert.strictEqual(alertText, 'this was a useless form, but thank you very much anyway');
         await alert.accept();
     });
+
+    it('should have only one submit button on the form', async function() {
+        await driver.get('https://kaspertonsgaardmerkle.github.io/Hackathon-Challenge/index.html');
+        const submitButtons = await driver.findElements(By.css('button[type="submit"]'));
+        assert.strictEqual(submitButtons.length, 1);
+    });
 });
