@@ -6,3 +6,10 @@ Contact link is missing in the navbar on frontpage
 
 # Bug 3
 Link to contact page is not working on the about page
+
+# Bug 4
+Create contact form
+
+# Bug 5 
+Fix so we have a propper 404 page (note only works on github pages)
+Also fix nonexistent page to be existent
